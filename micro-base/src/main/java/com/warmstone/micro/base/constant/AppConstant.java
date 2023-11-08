@@ -33,7 +33,7 @@ public class AppConstant {
     public static final String MILLISECOND_DATE_TIME_FORMAT = "yyyyMMddHHmmssSSS";
 
     /**
-     * 文件分隔符
+     * 文件后缀分隔符
      */
     public static final String FILE_SEPARATOR = ".";
 }

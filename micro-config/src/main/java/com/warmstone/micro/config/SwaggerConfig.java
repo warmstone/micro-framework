@@ -21,7 +21,7 @@ import springfox.documentation.spring.web.plugins.Docket;
 @EnableOpenApi
 public class SwaggerConfig {
 
-    @Value("${spring.application.name}")
+    @Value("${spring.application.name:micro-service}")
     private String applicationName;
 
     @Bean
@@ -29,7 +29,7 @@ public class SwaggerConfig {
         return new Docket(DocumentationType.SWAGGER_2)
                .apiInfo(apiInfo())
                .select()
-               .apis(RequestHandlerSelectors.basePackage("com.warmstone.micro.*.controller"))
+               .apis(RequestHandlerSelectors.basePackage("com.warmstone.*.controller"))
                .paths(PathSelectors.any())
                .build();
     }

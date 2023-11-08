@@ -13,7 +13,12 @@ public enum RetCode {
     UNAUTHORIZED(40100, "未认证"),
     PERMISSION_DENIED(40300, "权限不足"),
     LOGIN_FAILED(40500, "用户名或者密码错误"),
-    LOGIN_EXPIRED(40600, "登录失效")
+    LOGIN_EXPIRED(40600, "登录失效"),
+    ACCOUNT_LOCKED(40700, "账号被锁定"),
+    ACCOUNT_DISABLED(40800, "账号被禁用"),
+    ACCOUNT_EXPIRED(40900, "账号过期"),
+    ACCOUNT_NOT_EXIST(41000, "账号不存在"),
+    ACCOUNT_PASSWORD_ERROR(41200, "账号密码错误"),
     ;
 
     private Integer code;
