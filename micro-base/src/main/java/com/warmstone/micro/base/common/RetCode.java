@@ -19,6 +19,7 @@ public enum RetCode {
     ACCOUNT_EXPIRED(40900, "账号过期"),
     ACCOUNT_NOT_EXIST(41000, "账号不存在"),
     ACCOUNT_PASSWORD_ERROR(41200, "账号密码错误"),
+    TOKEN_PARSE_ERROR(41300, "token解析失败")
     ;
 
     private Integer code;

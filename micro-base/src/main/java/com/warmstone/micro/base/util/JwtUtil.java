@@ -22,9 +22,9 @@ import java.util.function.Function;
  * @date 2023/11/8 20:28
  * @description
  */
-public class JWTUtil {
+public class JwtUtil {
 
-    private static final Logger logger = LoggerFactory.getLogger(JWTUtil.class);
+    private static final Logger logger = LoggerFactory.getLogger(JwtUtil.class);
 
     private static final Clock clock = DefaultClock.INSTANCE;
 
@@ -113,12 +113,12 @@ public class JWTUtil {
     }
 
     public static void main(String[] args) {
-        String token = JWTUtil.generateToken("root");
+        String token = JwtUtil.generateToken("root");
         while (true) {
             logger.info("token: {}", token);
-            logger.info("expirationDate: {}", DateUtil.format(JWTUtil.getExpirationDateFromToken(token), DatePattern.NORM_DATETIME_FORMAT));
-            logger.info("isTokenExpired: {}", JWTUtil.isTokenExpired(token));
-            Boolean canTokenBeRefreshed = JWTUtil.canTokenBeRefreshed(token, DateUtil.date());
+            logger.info("expirationDate: {}", DateUtil.format(JwtUtil.getExpirationDateFromToken(token), DatePattern.NORM_DATETIME_FORMAT));
+            logger.info("isTokenExpired: {}", JwtUtil.isTokenExpired(token));
+            Boolean canTokenBeRefreshed = JwtUtil.canTokenBeRefreshed(token, DateUtil.date());
             logger.info("canTokenBeRefreshed: {}", canTokenBeRefreshed);
             if (canTokenBeRefreshed) {
                 break;
