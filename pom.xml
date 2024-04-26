@@ -13,6 +13,7 @@
     <modules>
         <module>micro-base</module>
         <module>micro-config</module>
+        <module>micro-mbg</module>
     </modules>
 
     <properties>
